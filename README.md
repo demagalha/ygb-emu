@@ -1,5 +1,5 @@
 # YET ANOTHER GAMEBOY EMULATOR
-Began this to understant more about low level stuff/ 4fun
+Began this to understand more about low level stuff/ 4fun\
 It is not fully accurate, but it passes Blargg's cpu_instr and instr_timing
 
 # To do
@@ -8,7 +8,7 @@ It is not fully accurate, but it passes Blargg's cpu_instr and instr_timing
 - GBC Support
 
 
->Here's it running, from a game I actually own irl
+>Here's it running, from a game I actually own IRL.
 <p align="center" width="100%">
     <img width="45%" src="/img/batman.png"> 
 </p>
