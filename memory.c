@@ -71,12 +71,12 @@ void memory_update_joypad(void) {
 }
 
 void memory_init() {
-    memset(vram,       0x00, sizeof(vram));
-    memset(wram0,      0x00, sizeof(wram0));
-    memset(wram1,      0x00, sizeof(wram1));
-    memset(oam,        0x00, sizeof(oam));
-    memset(io_regs,    0x00, sizeof(io_regs));
-    memset(hram,       0x00, sizeof(hram));
+    memset(vram, 0x00, sizeof(vram));
+    memset(wram0, 0x00, sizeof(wram0));
+    memset(wram1, 0x00, sizeof(wram1));
+    memset(oam, 0x00, sizeof(oam));
+    memset(io_regs, 0x00, sizeof(io_regs));
+    memset(hram, 0x00, sizeof(hram));
     memset(cartridge_ram, 0x00, sizeof(cartridge_ram));
     interrupt_enable = 0x00;
     io_regs[0x0F] = 0xE1;
