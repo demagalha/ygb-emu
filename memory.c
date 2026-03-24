@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <raylib.h>
 
-// === Fixed memory regions ===
+// Fixed memory regions
 static uint8_t vram[0x2000]; // 8KB
 static uint8_t wram0[0x1000]; // 4KB
 static uint8_t wram1[0x1000]; // 4KB
@@ -16,7 +16,7 @@ static uint8_t interrupt_enable; // 1B
 static uint8_t joypad_dir = 0x0F; // RIGHT, LEFT, UP, DOWN
 static uint8_t joypad_action = 0x0F; // A, B, SELECT, START
 
-// === MBC State & Memory ===
+// MBC State & Memory
 static uint8_t cartridge_ram[0x8000]; // 32KB of external RAM for saves
 static uint8_t mbc_type = 0; // 0 = ROM ONLY, 1 = MBC1, 3 = MBC3
 static uint32_t current_rom_bank = 1;
@@ -27,7 +27,7 @@ static uint8_t mbc1_bank2 = 0;
 static uint8_t mbc1_mode = 0; // 0 = ROM mode, 1 = RAM mode
 static uint16_t mbc5_rom_bank = 1;
 
-// === ROM data reference ===
+// ROM data reference
 static const uint8_t* full_rom_data = NULL;
 static size_t full_rom_size = 0;
 
@@ -268,7 +268,7 @@ void memory_write8(uint16_t addr, uint8_t value) {
             return;
         }
 
-        // --- TIMER SPECIAL CASE ---
+        // TIMER SPECIAL CASE
         if (addr == 0xFF04) { // DIV register
             io_regs[addr - 0xFF00] = 0; // writing resets DIV (see pandocs)
             timer_reset_internal_div(); // Reset internal clock tick

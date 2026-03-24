@@ -12,3 +12,5 @@ It is not fully accurate, but it passes Blargg's cpu_instr and instr_timing
 <p align="center" width="100%">
     <img width="45%" src="/img/batman.png"> 
 </p>
+
+Usage: ./main <romname.gb>
