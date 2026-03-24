@@ -8,9 +8,13 @@ It is not fully accurate, but it passes Blargg's cpu_instr and instr_timing
 - GBC Support
 
 
->Here's it running, from a game I actually own IRL.
+>Here's it running, from games I actually own IRL.
 <p align="center" width="100%">
     <img width="45%" src="/img/batman.png"> 
+</p>
+
+<p align="center" width="100%">
+    <img width="45%" src="/img/pkred.png"> 
 </p>
 
 Usage: ./main <romname.gb>

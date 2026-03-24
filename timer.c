@@ -25,7 +25,7 @@ void timer_reset_internal_div() {
 
 void timer_step(int cycles) {
 
-    // ----- DIV -----
+    // DIV
     div_counter += cycles;
 
     while (div_counter >= 256) {
@@ -35,7 +35,7 @@ void timer_step(int cycles) {
         memory_set_div_direct(div + 1); // memory_write8(0xFF04, div + 1); if we use this this will reset div...
     }
 
-    // ----- TIMA -----
+    // TIMA
     uint8_t tac = memory_read8(0xFF07);
 
     if (!(tac & 0x04)) return; // timer disabled
