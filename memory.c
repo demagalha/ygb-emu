@@ -50,15 +50,15 @@ void memory_update_joypad(void) {
 
     // Direction keys
     if (IsKeyDown(KEY_RIGHT)) joypad_dir &= ~(1 << 0); // Clear Bit 0
-    if (IsKeyDown(KEY_LEFT))  joypad_dir &= ~(1 << 1); // Clear Bit 1
-    if (IsKeyDown(KEY_UP))    joypad_dir &= ~(1 << 2); // Clear Bit 2
-    if (IsKeyDown(KEY_DOWN))  joypad_dir &= ~(1 << 3); // Clear Bit 3
+    if (IsKeyDown(KEY_LEFT)) joypad_dir &= ~(1 << 1); // Clear Bit 1
+    if (IsKeyDown(KEY_UP)) joypad_dir &= ~(1 << 2); // Clear Bit 2
+    if (IsKeyDown(KEY_DOWN)) joypad_dir &= ~(1 << 3); // Clear Bit 3
 
     // Action keys (Z=A, X=B, Enter=Start, Backspace=Select)
-    if (IsKeyDown(KEY_Z))         joypad_action &= ~(1 << 0); // Clear Bit 0
-    if (IsKeyDown(KEY_X))         joypad_action &= ~(1 << 1); // Clear Bit 1
+    if (IsKeyDown(KEY_Z)) joypad_action &= ~(1 << 0); // Clear Bit 0
+    if (IsKeyDown(KEY_X)) joypad_action &= ~(1 << 1); // Clear Bit 1
     if (IsKeyDown(KEY_BACKSPACE)) joypad_action &= ~(1 << 2); // Clear Bit 2
-    if (IsKeyDown(KEY_ENTER))     joypad_action &= ~(1 << 3); // Clear Bit 3
+    if (IsKeyDown(KEY_ENTER)) joypad_action &= ~(1 << 3); // Clear Bit 3
 
     int req_int = 0;
     if (!(io_regs[0x00] & 0x20) && (joypad_action != old_act)) req_int = 1;
