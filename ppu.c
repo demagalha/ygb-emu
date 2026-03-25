@@ -36,14 +36,6 @@ static uint8_t obj_palette_0[4]; // Array of 4 color values
 // The object palette (for palette 1)
 static uint8_t obj_palette_1[4]; // Array of 4 color values for Object Palette 1
 
-
-static const uint32_t color_palette[4] = {
-    0xFFFFFF, // White (0x00)
-    0xBDBDBD, // Light Gray (0x01)
-    0x6E6E6E, // Dark Gray (0x02)
-    0x000000 // Black (0x03)
-};
-
 // Framebuffer for 160x144 pixels
 static Color framebuffer[160 * 144];
 
