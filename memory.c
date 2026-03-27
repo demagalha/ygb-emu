@@ -17,7 +17,7 @@ static uint8_t joypad_dir = 0x0F; // RIGHT, LEFT, UP, DOWN
 static uint8_t joypad_action = 0x0F; // A, B, SELECT, START
 
 // MBC State & Memory
-static uint8_t cartridge_ram[0x8000]; // 32KB of external RAM for saves
+static uint8_t cartridge_ram[0x8000]; // 32KB of external RAM for saves < to do
 static uint8_t mbc_type = 0; // 0 = ROM ONLY, 1 = MBC1, 3 = MBC3
 static uint32_t current_rom_bank = 1;
 static uint8_t current_ram_bank = 0;
@@ -217,7 +217,7 @@ void memory_write8(uint16_t addr, uint8_t value) {
                 // Upper 9th bit (Bit 0 of the value)
                 mbc5_rom_bank = (mbc5_rom_bank & 0x00FF) | ((value & 0x01) << 8);
             }
-            // MBC5 allows bank 0 to be mapped to 0x4000! No zero-hack needed.
+            // MBC5 allows bank 0 to be mapped to 0x4000
             current_rom_bank = mbc5_rom_bank;
         }
     } else if (addr <= 0x5FFF) {
