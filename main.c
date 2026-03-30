@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
     timer_init();
     cpu_reset();
     
-    InitWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Game Boy Emulator");
+    InitWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Yet Another Game Boy Emulator");
     SetTargetFPS(60); // ~59.7 Hz for Game Boy
 
     // Texture for the Game Boy screen
